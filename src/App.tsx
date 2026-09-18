@@ -1,23 +1,11 @@
-import  Sidebar  from './layout/Sidebar'
-import Header from './layout/Header'
-import MainContent from './layout/MainContent'
-import AppRoutes from './routes/AppRoutes'
 
-function App() {
+import { AuthProvider } from './context/AuthContext';
+import AppRoutes from './routes/AppRoutes';
 
+export default function App() {
   return (
-    <>
-    <Header />
-    <div className='w-full flex flex-row-reverse'>
-    
-    <MainContent>
-    <AppRoutes />
-    </MainContent>
-    <Sidebar />
-
-      </div>
-      </>
-  )
+      <AuthProvider>
+        <AppRoutes />
+      </AuthProvider>
+  );
 }
-
-export default App

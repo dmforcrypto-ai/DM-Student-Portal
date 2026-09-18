@@ -1,1 +1,52 @@
-@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Instrument+Sans:wght@400;500;600&display=swap');
+@import 'tailwindcss';
+
+:root {
+  --ink: #0e2a2b;
+  --ink-soft: #1c4443;
+  --canvas: #eef1f0;
+  --surface: #ffffff;
+  --line: #d8dedc;
+  --muted: #5d6b69;
+  --brass: #b07d2b;
+  --brass-soft: #f6ecd9;
+
+  --pass: #1f7a5a;
+  --watch: #a8701a;
+  --fail: #9c3341;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--canvas);
+  color: var(--ink);
+  font-family: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.display {
+  font-family: 'Fraunces', ui-serif, Georgia, serif;
+  font-optical-sizing: auto;
+}
+
+.figures {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--brass);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
